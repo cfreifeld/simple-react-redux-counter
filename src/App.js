@@ -1,17 +1,10 @@
 import React from 'react';
 import './App.css';
-import Counter from "./components/Counter";
-import {connect, Provider} from "react-redux";
+import {Provider} from "react-redux";
 import {createStore} from "redux";
 import counterReducer from "./reducers";
+import CounterApp from "./containers/CounterApp";
 
-const stateToPropertyMapper = (state) => {
-  return {
-    value: state.value,
-    foo: state.value * state.value
-  }
-}
-const CounterApp = connect(stateToPropertyMapper)(Counter)
 const store = createStore(counterReducer)
 
 function App() {

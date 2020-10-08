@@ -1,15 +1,11 @@
 import React from 'react'
 
-const Counter = ({value = 0, dispatch, foo, bar}) =>
+const Counter = ({value = 0, squared, plus, minus}) =>
     <div>
-      <span>{value}, squared: {foo}</span>
-      <button onClick={e => {
-        dispatch({type: 'plus'})
-      }}
+      <span>{value}, squared: {squared}</span>
+      <button onClick={plus}
       > + </button>
-      <button onClick={e => {
-        dispatch({type: 'minus'})
-      }}
+      <button onClick={minus}
       > - </button>
     </div>
 export default Counter
